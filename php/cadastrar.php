@@ -5,8 +5,8 @@
 
     $extrair=json_decode($obterDados);
     
-    $nomeCurso= $extrair->cursos->nomeCurso;
-    $valorCurso= $extrair->cursos->valorCurso;
+    $nomeCurso= $extrair->nomeCurso;
+    $valorCurso= $extrair->valorCurso;
     $sql = "INSERT INTO cursos(nomeCurso,valorCurso) VALUES ('$nomeCurso', $valorCurso)";
     mysqli_query($conexao,$sql);
     $curso =[
@@ -14,5 +14,5 @@
         'valorCurso' => $valorCurso
     ];
 
-    json_encode(['curso' => $curso]);
+    
    

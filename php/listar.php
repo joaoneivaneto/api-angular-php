@@ -16,5 +16,4 @@
         $cursos[$indice]['valorCurso']=$linha['valorCurso'];
         $indice++;
     }
-
-    json_encode($cursos);
+   echo(json_encode(['cursos'=>$cursos]));   
